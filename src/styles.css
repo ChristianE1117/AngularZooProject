@@ -1,1 +1,231 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    box-sizing: border-box;
+    background: whitesmoke;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+body {
+    margin: 30px 25% auto;
+}
+
+.search-form {
+    max-width: 100px;
+    margin-top: 10px;
+    margin-left: 80%;
+}
+
+.hover-text {
+    display: none;
+}
+.hover-element:hover .hover-text {
+    display: inline;
+}
+
+.navLink {
+    text-decoration: none;
+    padding: 5px 5px;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+.image {
+    width: 800px;
+}
+.overlay {
+    position: absolute;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+.info {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+.lines {
+    position: absolute;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.grid-container {
+    display: grid;
+    background-color: #2196F3;
+    padding: 10px;
+    gap: 5px;
+}
+
+.day-of-week,
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+}
+
+.day-of-week {
+    font-size: 20px;
+}
+
+.grid-element {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding-top: 10%;
+    padding-bottom: 20%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.day-element {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10%;
+}
+
+.date-grid{
+    font-size: 15px;
+    text-align: left;
+}
+
+.date-grid div:first-child {
+    grid-column: 6;
+}
+
+#timeLine {
+    position: absolute;
+    width: 50%; 
+    top: 30%;
+    left: auto;
+    border: 1px solid;
+    border-color: black;
+}
+
+.timeHash
+{
+    position: absolute;
+    width: 50px; 
+    top: 30%;
+    border: 1px solid;
+    border-color: black;
+    transform: rotate(-45deg);
+}
+
+.timeLabel
+{
+    position: absolute;
+    font-size: 27px;
+}
+
+.timeLabelYear
+{
+    position: absolute;
+    font-size: 25px;
+    color: aqua;
+}
+
+.timelineDiv {
+    padding-top: 20%;
+    padding-bottom: 10%;
+}
+
+.detectBox {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+}
+
+#donHead {
+    padding-top: 10%;
+    text-align: center;
+}
+
+#donLabel {
+    text-align: center;
+}
+
+.donateButton {
+    width: 100px;
+    height: 70px;
+    background-color: lightskyblue;
+    border: 1px solid black;
+}
+
+.buttons {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+#donateInput {
+    margin: auto;
+    width: 20%;
+    padding: 10px;
+}
+
+form {
+    margin: auto;
+    text-align: center;
+}
+
+#gameContainer {
+    background-color: lightblue;
+    padding-top: 20px;
+}
+
+.gameTop, 
+.gameBottom {
+    display: grid;
+    background-color: gray;
+    padding: 10px;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    text-align: center;
+}
+
+.gameT, .gameB {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #2196F3;
+}
+
+.gameT img, .gameB img {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: whitesmoke;
+}
+
+.correct {
+    background-color: green;
+}
+
+#gameInformation {
+    min-height: 100px;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#popularList, #allList {
+    list-style-type: none;
+    text-align: center;
+    display: grid;
+    padding: 30px;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#popularList li:hover , #allList li:hover {
+    font-size: 30px;
+}
+
+#adoptButton {
+    display: none;
+    align-self: center;
+    margin-bottom: 50px;
+}

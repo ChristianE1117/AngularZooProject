@@ -1,0 +1,38 @@
+<div class="game-container">
+ 
+  <div class="game-info">
+    <h2 id="correctHead">{{ heading }}</h2>
+    <p id="correctPar">{{ description }}</p>
+  </div>
+ 
+  <div class="game-columns">
+ 
+    <div class="game-column">
+      <h3>Animals</h3>
+      <button
+        *ngFor="let item of gameTops"
+        class="gameT game-btn"
+        [class.correct]="item.correct"
+        [style.backgroundColor]="getTopColor(item)"
+        [disabled]="item.correct"
+        (click)="selectTop(item)">
+        {{ item.label }}
+      </button>
+    </div>
+ 
+    <div class="game-column">
+      <h3>Habitats</h3>
+      <button
+        *ngFor="let item of gameBottoms"
+        class="gameB game-btn"
+        [class.correct]="item.correct"
+        [style.backgroundColor]="getBottomColor(item)"
+        [disabled]="item.correct"
+        (click)="selectBottom(item)">
+        {{ item.label }}
+      </button>
+    </div>
+ 
+  </div>
+ 
+</div>
