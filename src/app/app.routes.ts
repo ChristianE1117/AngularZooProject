@@ -7,7 +7,7 @@ import { AnimalGame } from './animal-game/animal-game'
 export const routes: Routes = [
   { path: 'home', component: Home },
   { path: '', component: Home },
-  { path: 'endangered', component: Endangered },
+  // { path: 'endangered', component: Endangered },
   { path: 'history', component: History },
   { path: 'animalGame', component: AnimalGame },
 ];

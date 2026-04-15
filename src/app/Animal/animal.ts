@@ -1,17 +1,20 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { ApiService } from '../api.service';
+import { FormsModule } from '@angular/forms'; // Add this import
 import { toArray } from 'rxjs';
+import { Observable, fromEvent, Subscription  } from 'rxjs';
 
 @Component({
   selector: 'app-animal',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './animal.html',
   styleUrl: './animal.css',
 })
 
 export class Animal {
 
-    animals: AnimalObject[] = []
+    animals: AnimalObject[] = [];
+    searchString: string = "";
 
     constructor(private api: ApiService, private cdr: ChangeDetectorRef) {
     }
@@ -19,6 +22,16 @@ export class Animal {
     ngOnInit() {
         this.loadAnimals();
     }
+
+    inputChanged($event: string) {
+        this.api.getAnimals().subscribe(res => {
+            const allAnimals = res as AnimalObject[];
+            this.animals = allAnimals.filter(animal =>
+                animal.name.toLowerCase().includes($event.toLowerCase())
+                );
+            this.cdr.detectChanges();
+    });
+}
 
     private loadAnimals() {
         this.api.getAnimals().subscribe(res => {

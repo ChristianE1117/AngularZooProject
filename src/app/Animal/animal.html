@@ -1,4 +1,7 @@
 <div>
+    
+    <input type="text" [(ngModel)]="searchString" (ngModelChange)="inputChanged($event)" placeholder="Search Animals"/>
+
     <ul class="animalList">
         @for (animal of animals; track animal.name) {
             <li class="animalListItem">
